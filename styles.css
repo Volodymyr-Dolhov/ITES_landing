@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -31,6 +35,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    top: 0;
 }
 
 #logo {
@@ -75,6 +83,7 @@ footer {
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-top: 70px;
 }
 
 .hero-content h1 {
