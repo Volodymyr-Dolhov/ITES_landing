@@ -9,7 +9,7 @@ contact_button.addEventListener("mousemove", (e) => {
 
 document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", function () {
-        if (Math.round(window.scrollY) > 100) {
+        if (Math.round(window.scrollY) > 20) {
             document.querySelector(".header-container").classList.add("scrolled");
         } else {
             document.querySelector(".header-container").classList.remove("scrolled");
