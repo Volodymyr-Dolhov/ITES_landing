@@ -17,6 +17,17 @@ contact_button.addEventListener('mousemove', e => {
   contact_button.style.setProperty('--y', y + 'px');
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    window.addEventListener('scroll', function() {
+        if (Math.round(window.scrollY) > 100) {
+            document.querySelector('.header-container').classList.add('scrolled');
+        } else {
+            document.querySelector('.header-container').classList.remove('scrolled');
+        }
+    });
+});
+
+
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
