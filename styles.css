@@ -50,50 +50,72 @@ body {
 }
 
 .contact-button-header {
-  display: flex;
+  position: relative;
   height: 32px;
   padding: 8px 12px;
-  justify-content: center;
-  align-items: center;
-  gap: 4px;
-  background-color: #0c0b39;
-  color: white;
-  font-weight: bold;
-  font-size: 14px;
-  font-family: "Poppins", sans-serif;
   border-radius: 16px;
-  text-decoration: none;
-  transition: background-color 0.3s ease-in-out;
+  background: #0c0b39;
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
 }
 
-.contact-button-header:hover {
-  background-color: darkblue;
+.contact-button-header::before {
+  --size: 0;
+  content: "";
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  background: radial-gradient(circle closest-side, #1f1beb, transparent);
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease;
+}
+
+.contact-button-header:hover::before {
+  --size: 200px;
 }
 
 .contact-button {
-  display: flex;
+  position: relative;
   width: 302px;
   height: 52px;
   padding: 10px 20px;
-  margin-right: 2rem;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-self: end;
-  gap: 8px;
-  flex-shrink: 0;
   border-radius: 24px;
   background: #0c0b39;
   color: #fefeff;
-  text-align: center;
   font-size: 18px;
-  font-style: normal;
   font-weight: 600;
   line-height: normal;
+  border: none;
+  align-self: flex-end;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
 }
 
-.contact-button:hover {
-  background-color: darkblue;
+.contact-button::before {
+  --size: 0;
+  content: "";
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  background: radial-gradient(circle closest-side, #1f1beb, transparent);
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease;
+}
+
+.contact-button:hover::before {
+  --size: 200px;
 }
 
 .about-container {
