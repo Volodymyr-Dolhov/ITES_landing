@@ -1,361 +1,157 @@
-html {
-    scroll-behavior: smooth;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(300px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.animated {
-    opacity: 0;
-    animation-name: fadeInUp;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
+* {
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+  background-color: #fff;
+  color: #1a202c;
+  display: flex;
+  align-items: center;
 }
 
-header {
-    background-color: #005f73;
-    color: #ffffff;
-    padding: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    z-index: 9999;
-    width: 100%;
-    top: 0;
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
-#logo {
-    margin-left: 20px;
-    width: 50px; /* adjust as needed */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+.logo {
+  margin-right: 1rem;
 }
 
-nav ul li {
-    padding: 0 20px;
+.nav-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
+.nav-list li {
+  margin: 0 1rem;
 }
 
-section {
-    padding: 50px 20px;
-    text-align: center;
+.nav-list a {
+  color: gray;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
 }
 
-footer {
-    background-color: #00334e;
-    color: #ffffff;
-    padding: 20px 0;
-    text-align: center;
+.nav-list a:hover {
+  color: black;
 }
 
-#hero {
-    background: url('hero.png') no-repeat center center/cover;
-    color: #fff;
-    height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-top: 70px;
+.contact-button-header {
+  display: flex;
+  height: 32px;
+  padding: 8px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  background-color: #0c0b39;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 16px;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
 }
 
-.hero-content h1 {
-    font-size: 2.5em;
-    margin-bottom: 0.5em;
+.contact-button-header:hover {
+  background-color: darkblue;
 }
 
-.hero-content p {
-    font-size: 1.2em;
-    margin-bottom: 1em;
+.contact-button {
+  display: flex;
+  width: 302px;
+  height: 52px;
+  padding: 10px 20px;
+  margin-right: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: end;
+  gap: 8px;
+  flex-shrink: 0;
+  border-radius: 24px;
+  background: #0c0b39;
+  color: #fefeff;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
-.cta-button {
-    background-color: #0077b6; /* Blue shade */
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+.contact-button:hover {
+  background-color: darkblue;
 }
 
-.cta-button:hover {
-    background-color: #0096c7; /* Lighter blue shade */
+.about-container {
+  margin: 3rem auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#about {
-    background-color: #e6faff; /* Light blue background for a subtle contrast */
-    color: #333;
-    padding: 50px 20px;
-    text-align: left;
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-#about h2, #about h3 {
-    color: #005f73; /* Darker shade of blue for headings */
+.about-text-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
 }
 
-#about p {
-    font-size: 1em;
-    line-height: 1.6;
+.image {
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 }
 
-#team, #why-choose-us {
-    background-color: #f4f4f4; /* Neutral background */
-    padding: 50px 20px;
-    text-align: center;
+.text-container {
+  text-align: center;
 }
 
-.team-members {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.title {
+  color: #000;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 72px;
+  text-transform: uppercase;
+  align-self: baseline;
 }
 
-.team-member {
-    margin: 20px;
-    text-align: center;
+.subtitle {
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 84px;
+  margin-top: 1rem;
+  align-self: baseline;
+  max-width: 800px;
 }
 
-.team-member img {
-    width: 150px; /* Adjust as needed */
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-#why-choose-us ul {
-    text-align: left;
-    list-style: inside;
-}
-
-#services {
-    background-color: #e6faff; /* Light blue background */
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.service-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.service {
-    width: 250px; /* adjust as needed */
-    margin: 15px;
-    text-align: center;
-}
-
-.service img {
-    width: 100px; /* adjust as needed */
-    margin-bottom: 15px;
-}
-
-.service h3 {
-    color: #005f73; /* Darker shade of blue for headings */
-}
-
-.service p {
-    font-size: 1em;
-    line-height: 1.6;
-}
-
-#benefits {
-    background-color: #f4f4f4; /* Neutral background */
-    padding: 50px 20px;
-    text-align: center;
-}
-
-#benefits ul {
-    text-align: left;
-    list-style: inside;
-    margin: 0 auto; /* Centering the list */
-    max-width: 600px; /* Adjust as needed */
-}
-
-.testimonials {
-    margin-top: 20px;
-}
-
-.testimonial p {
-    font-style: italic;
-    color: #333;
-}
-
-.cta-button {
-    background-color: #0077b6; /* Blue shade */
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    display: inline-block;
-}
-
-.cta-button:hover {
-    background-color: #0096c7; /* Lighter blue shade */
-}
-
-#portfolio {
-    background-color: #e6faff; /* Light blue background */
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.project {
-    width: 300px; /* adjust as needed */
-    margin: 15px;
-    text-align: left;
-    background-color: #fff; /* White background for each project */
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1); /* Optional shadow for depth */
-    padding: 20px;
-    border-radius: 10px; /* Optional rounded corners */
-}
-
-.project img {
-    width: 100%; /* Full width of the container */
-    height: auto;
-    border-radius: 5px; /* Optional rounded corners for the image */
-    margin-bottom: 15px;
-}
-
-.more-info-button {
-    background-color: #0077b6; /* Blue shade */
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-}
-
-.more-info-button:hover {
-    background-color: #0096c7; /* Lighter blue shade */
-}
-
-#contact {
-    background-color: #f4f4f4; /* Neutral background */
-    padding: 50px 20px;
-    text-align: center;
-}
-
-#contact h2 {
-    color: #005f73; /* Dark blue */
-    margin-bottom: 20px;
-}
-
-#contact-form {
-    max-width: 500px;
-    margin: auto;
-}
-
-#contact-form input[type="text"],
-#contact-form input[type="email"],
-#contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-#contact-form textarea {
-    height: 150px;
-    resize: vertical;
-}
-
-.submit-button {
-    background-color: #0077b6; /* Blue shade */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-}
-
-.submit-button:hover {
-    background-color: #0096c7; /* Lighter blue shade */
-}
-
-.additional-info p {
-    margin-top: 20px;
-    color: #333;
-}
-
-footer {
-    background-color: #00334e;
-    color: #ffffff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.footer-content {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-}
-
-.footer-nav {
-    list-style-type: none;
-    padding: 0;
-}
-
-.footer-nav li {
-    display: inline;
-    margin-right: 20px;
-}
-
-.footer-nav li a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.contact-info, .social-media, .legal-info {
-    margin-top: 20px;
-}
-
-.social-media a {
-    color: #ffffff;
-    margin-right: 10px;
-    text-decoration: none;
-}
-
-.legal-info a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.legal-info a:hover {
-    text-decoration: underline;
+.description {
+  color: gray;
+  margin-top: 1rem;
+  max-width: 600px;
+  align-self: center;
 }
