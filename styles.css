@@ -187,7 +187,6 @@ header {
 }
 
 .hero-container {
-  margin: 3rem auto;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -225,12 +224,12 @@ header {
   font-size: 30px;
   font-style: normal;
   font-weight: 600;
-  line-height: 72px;
   text-transform: uppercase;
   align-self: baseline;
 }
 
 .subtitle {
+  margin-bottom: 1rem;
   font-size: 72px;
   font-style: normal;
   font-weight: 500;
@@ -290,4 +289,3 @@ header {
   border-left: 14px solid #1f1beb; /* Thicker blue border */
   z-index: -1; /* Place it behind the white triangle */
 }
-
