@@ -9,11 +9,6 @@ body {
   align-items: center;
 }
 
-html {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(30, 71, 111, 0.55) rgb(255, 255, 255);
-}
-
 ::-webkit-scrollbar {
   width: 9px;
 }
