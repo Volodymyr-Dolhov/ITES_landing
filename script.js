@@ -78,9 +78,9 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }, {
-        root: null, // observing for viewport
+        root: null,
         rootMargin: '0px',
-        threshold: 0.1 // 10% of the element should be visible
+        threshold: 0.1
     });
 
     aboutBlocks.forEach(block => {
@@ -95,46 +95,18 @@ document.addEventListener("DOMContentLoaded", function () {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('in-view');
-            } else {
-                entry.target.classList.remove('in-view');
-            }
+            } 
+            // else {
+            //     entry.target.classList.remove('in-view');
+            // }
         });
     }, {
-        root: null, // observing for viewport
-        rootMargin: '0px 0px 80% 0px',
-        threshold: 0 // 10% of the element should be visible
+        root: null,
+        rootMargin: '0px 0px 90% 0px',
+        threshold: 0
     });
 
     aboutBlocks.forEach(block => {
         observer.observe(block);
     });
 });
-
-
-
-// Function to check if the element is in view
-function isInView(element) {
-    const rect = element.getBoundingClientRect();
-
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-}
-
-// Function to run on scroll
-function checkScroll() {
-    const aboutBlocks = document.querySelectorAll('.about-first, .about-second, .about-third, .about-fourth, .about-fifth, .about-sixth, .about-seventh, .about-eighth, .about-nineth');
-    aboutBlocks.forEach(block => {
-        if (isInView(block)) {
-            block.classList.add('in-view');
-        } else {
-            block.classList.remove('in-view');
-        }
-    });
-}
-
-// Event listener for scroll
-window.addEventListener('scroll', checkScroll);
