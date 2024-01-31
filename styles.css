@@ -54,7 +54,7 @@ header {
 .slide-in-right {
   opacity: 0;
   transform: translateX(50%);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition: opacity 1.8s ease-out, transform 1.8s ease-out;
 }
 
 .in-view.slide-in-right {
@@ -65,7 +65,7 @@ header {
 .slide-in-left {
   opacity: 0;
   transform: translateX(-50%);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition: opacity 1.8s ease-out, transform 1.8s ease-out;
 }
 
 .in-view.slide-in-left {
@@ -76,7 +76,7 @@ header {
 .slide-in-bottom {
   opacity: 0;
   transform: translateY(100%);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition: opacity 1.8s ease-out, transform 1.8s ease-out;
 }
 
 .in-view.slide-in-bottom {
