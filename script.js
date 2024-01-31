@@ -66,3 +66,75 @@ document.querySelectorAll('.block-name-container').forEach(container => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const aboutBlocks = document.querySelectorAll('.about-first, .about-second, .about-third, .about-fourth, .about-seventh');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+            } else {
+                entry.target.classList.remove('in-view');
+            }
+        });
+    }, {
+        root: null, // observing for viewport
+        rootMargin: '0px',
+        threshold: 0.1 // 10% of the element should be visible
+    });
+
+    aboutBlocks.forEach(block => {
+        observer.observe(block);
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const aboutBlocks = document.querySelectorAll('.about-fifth, .about-sixth, .about-eighth, .about-nineth');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+            } else {
+                entry.target.classList.remove('in-view');
+            }
+        });
+    }, {
+        root: null, // observing for viewport
+        rootMargin: '0px 0px 70% 0px',
+        threshold: 0 // 10% of the element should be visible
+    });
+
+    aboutBlocks.forEach(block => {
+        observer.observe(block);
+    });
+});
+
+
+
+// Function to check if the element is in view
+function isInView(element) {
+    const rect = element.getBoundingClientRect();
+
+    return (
+        rect.top + offset >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom - offset <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+// Function to run on scroll
+function checkScroll() {
+    const aboutBlocks = document.querySelectorAll('.about-first, .about-second, .about-third, .about-fourth, .about-fifth, .about-sixth, .about-seventh, .about-eighth, .about-nineth');
+    aboutBlocks.forEach(block => {
+        if (isInView(block)) {
+            block.classList.add('in-view');
+        } else {
+            block.classList.remove('in-view');
+        }
+    });
+}
+
+// Event listener for scroll
+window.addEventListener('scroll', checkScroll);

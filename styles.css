@@ -7,6 +7,7 @@ body {
   color: #1a202c;
   display: flex;
   align-items: center;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -37,6 +38,57 @@ header {
   header {
     position: sticky;
   }
+}
+
+/* Animation initial state */
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+/* State when element is in view */
+.in-view {
+  opacity: 1;
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(50%);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.in-view.slide-in-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.in-view.slide-in-left {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-in-bottom {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.in-view.slide-in-bottom {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-in-left,
+.slide-in-right,
+.slide-in-bottom {
+  opacity: 0;
+  /* Other initial styles for your animation */
 }
 
 .container {
@@ -205,6 +257,7 @@ header {
 
 .hero-container {
   padding: 1rem;
+  padding-bottom: 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
