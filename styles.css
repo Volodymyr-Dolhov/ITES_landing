@@ -88,7 +88,6 @@ header {
 .slide-in-right,
 .slide-in-bottom {
   opacity: 0;
-  /* Other initial styles for your animation */
 }
 
 .container {
