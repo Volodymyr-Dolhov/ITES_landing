@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }, {
         root: null, // observing for viewport
-        rootMargin: '0px 0px 70% 0px',
+        rootMargin: '0px 0px 80% 0px',
         threshold: 0 // 10% of the element should be visible
     });
 
