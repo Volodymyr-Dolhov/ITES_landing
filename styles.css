@@ -1,3 +1,32 @@
+:root {
+  --black: #000000;
+  --black-rock: #0c0b39;
+  --cadet-blue: #aab2ca;
+  --dove-gray: #6c6c6d;
+  --gray02100: #ffffff;
+  --san-felix: #0d651b;
+  --tundora: #464545;
+  --unmellow-yellow: #1e1aeb;
+  --white: #fefeff;
+  --woodsmoke: #0c0c0d;
+  --font-size-18px: 18px;
+  --font-size-l: 26px;
+  --font-size-m: 24px;
+  --font-size-xl: 28px;
+  --font-size-xxl: 30px;
+  --font-size-xxxl: 36px;
+  --font-size-xxxxl: 44px;
+  --font-size-xxxxxl: 48px;
+  --font-family-montserrat: "Montserrat", Helvetica;
+  --font-family-montserrat_alternates: "Montserrat Alternates", Helvetica;
+  --font-family-poppins: "Poppins", Helvetica;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+
 * {
   font-family: "Montserrat", sans-serif;
 }
@@ -5,6 +34,9 @@
 body {
   background-color: #fff;
   color: #1a202c;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
   display: flex;
   align-items: center;
   overflow-x: hidden;
@@ -364,29 +396,12 @@ header {
   justify-content: center;
   align-items: center;
   flex: 3;
-  background: radial-gradient(
-    circle,
-    #f9fbfa 0%,
-    #eff4f2 0%,
-    #eff4f2 89%,
-    #e0e5e5 89%,
-    #ecf1ef 89%,
-    #ecf1ef 90%,
-    #e3eae6 94%,
-    #e0e9e3 94%,
-    #dfe7e3 95%,
-    #d6e1db 96%,
-    #d4e0da 97%,
-    #ced9d3 98%,
-    #ced9d3 98%,
-    #c9d5d0 98%,
-    #c9d5d0 99%,
-    #c3d4cb 99%,
-    #c3d4cb 99%,
-    #bdcdc3 100%,
-    #bdcdc3 100%,
-    #cfdcd5 100%
+  background: linear-gradient(
+    180deg,
+    rgb(241, 241, 243) 0%,
+    rgba(255, 255, 255, 0) 100%
   );
+  box-shadow: inset 0px 6px 50px 10px #00000040;
 }
 
 .about-first h1 {
@@ -403,29 +418,12 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: radial-gradient(
-    circle,
-    #f9fbfa 0%,
-    #eff4f2 0%,
-    #eff4f2 89%,
-    #e0e5e5 89%,
-    #ecf1ef 89%,
-    #ecf1ef 90%,
-    #e3eae6 94%,
-    #e0e9e3 94%,
-    #dfe7e3 95%,
-    #d6e1db 96%,
-    #d4e0da 97%,
-    #ced9d3 98%,
-    #ced9d3 98%,
-    #c9d5d0 98%,
-    #c9d5d0 99%,
-    #c3d4cb 99%,
-    #c3d4cb 99%,
-    #bdcdc3 100%,
-    #bdcdc3 100%,
-    #cfdcd5 100%
+  background: linear-gradient(
+    180deg,
+    rgb(241, 241, 243) 0%,
+    rgba(255, 255, 255, 0) 100%
   );
+  box-shadow: inset 0px 6px 50px 10px #00000040;
 }
 
 .about-third {
@@ -554,29 +552,12 @@ header {
   justify-content: center;
   align-items: start;
   padding-top: 100px;
-  background: radial-gradient(
-    circle,
-    #f9fbfa 0%,
-    #eff4f2 0%,
-    #eff4f2 89%,
-    #e0e5e5 89%,
-    #ecf1ef 89%,
-    #ecf1ef 90%,
-    #e3eae6 94%,
-    #e0e9e3 94%,
-    #dfe7e3 95%,
-    #d6e1db 96%,
-    #d4e0da 97%,
-    #ced9d3 98%,
-    #ced9d3 98%,
-    #c9d5d0 98%,
-    #c9d5d0 99%,
-    #c3d4cb 99%,
-    #c3d4cb 99%,
-    #bdcdc3 100%,
-    #bdcdc3 100%,
-    #cfdcd5 100%
+  background: linear-gradient(
+    180deg,
+    rgb(241, 241, 243) 0%,
+    rgba(255, 255, 255, 0) 100%
   );
+  box-shadow: inset 0px 6px 50px 10px #00000040;
 }
 
 .about-subcontainer-fourth {
@@ -645,4 +626,299 @@ header {
 .about-subcontainer-sixth {
   display: flex;
   flex-direction: column;
+}
+
+.services-subcontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.services-cardcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+
+.services-card {
+  position: relative;
+  width: 760px;
+  height: 420px;
+  background: #0c0b39;
+  border-radius: 16px;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+.services-card h1 {
+  color: #fff;
+  padding: 0 20rem 0 4rem;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 46px;
+}
+
+.services-card p {
+  color: #ffffff;
+  padding: 0 16rem 0 4rem;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.services-card img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.projects-desciption {
+  height: 200px;
+  display: flex;
+  gap: 80px;
+}
+
+.projects-desciption .projects-subtitle {
+  display: flex;
+  align-items: center;
+  height: 200px;
+  width: 70%;
+}
+
+.projects-customer-title {
+  color: var(--cadet-blue);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 600;
+  height: 54px;
+  left: 0px;
+  letter-spacing: 0px;
+  line-height: 72px;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 1600px;
+}
+
+.benefits-row-one {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.benefits-row-two {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 0 200px;
+  margin-bottom: 40px;
+}
+
+.benefits-card {
+  background-color: transparent;
+  border: 1.5px solid;
+  border-color: var(--cadet-blue);
+  border-radius: 16px;
+  height: 526px;
+  padding: 0 2.5rem;
+}
+
+.benefits-card h1 {
+  color: #474646;
+  font-family: var(--font-family-montserrat);
+  font-size: 35px;
+  font-weight: 600;
+  height: 104px;
+  left: 40px;
+  line-height: 52px;
+  text-align: left;
+  width: 302px;
+}
+
+.benefits-card p {
+  color: #6d6d6d;
+  font-size: var(--font-size-xl);
+  font-weight: 400;
+  line-height: 36px;
+  text-align: left;
+  width: 302px;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--black-rock);
+  height: 828px;
+  width: 100%;
+}
+
+.contact-subcontainer {
+  max-width: 1600px;
+  display: flex;
+  margin-top: 80px;
+}
+
+.contact-form-container {
+  flex: 1;
+  position: relative;
+}
+
+.contact-form-container h2 {
+  color: #fffefe;
+  font-size: var(--font-size-xxl);
+  font-weight: 600;
+  height: 67px;
+  line-height: 48px;
+  text-align: left;
+  width: 628px;
+}
+
+.contact-form-container input {
+  background-color: var(--black-rock);
+  border: 1px solid;
+  border-color: var(--cadet-blue);
+  border-radius: 12px;
+  width: 800px;
+  height: 48px;
+  margin-bottom: 24px;
+  font-size: 24px;
+  padding-left: 1rem;
+}
+
+.contact-form-container textarea {
+  background-color: var(--black-rock);
+  border: 1px solid;
+  border-color: var(--cadet-blue);
+  border-radius: 12px;
+  width: 800px;
+  min-height: 168px;
+  margin-bottom: 80px;
+  font-size: 24px;
+  padding-left: 1rem;
+}
+
+.contact-form-container button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  align-items: center;
+  background-color: var(--gray02100);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 62px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 10px 20px;
+  width: 245px;
+}
+
+.contact-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  margin-top: 60px;
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 200px;
+  padding: 0 200px;
+  margin: 60px 0;
+  gap: 8rem;
+}
+
+.footer-logo .logo {
+  width: 540px;
+  height: 80px;
+  background-image: url("logo-footer.svg");
+  background-repeat: no-repeat;
+}
+
+.footer-logo p {
+  color: var(--black);
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 40px;
+  width: 420px;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-nav a {
+  color: var(--black);
+  font-family: var(--font-family-montserrat);
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 40px;
+  text-decoration: none;
+}
+
+.footer-contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-contact-info h1 {
+  color: var(--black);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 22px;
+  margin: 32px 0;
+}
+
+.footer-contact-info p {
+  color: var(--black);
+  font-size: var(--font-size-xxl);
+  font-weight: 500;
+  line-height: 22px;
+  margin: 8px 0;
+}
+
+.footer-legal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-legal-info {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-legal-info a {
+  color: var(--unmellow-yellow);
+  font-family: var(--font-family-montserrat);
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 22px;
+  text-decoration: underline;
+}
+
+.footer-legal p {
+  color: var(--black);
+  font-size: var(--font-size-18px);
+  font-weight: 300;
+  line-height: 22px;
 }
