@@ -408,6 +408,15 @@ header {
   max-width: unset;
 }
 
+.about-subtitle-container {
+  width: 80%;
+}
+
+.about-container-first {
+  display: flex;
+  height: 360px;
+}
+
 .about-container-second {
   display: flex;
   height: 360px;
@@ -921,4 +930,398 @@ footer {
   font-size: var(--font-size-18px);
   font-weight: 300;
   line-height: 22px;
+}
+
+.burger-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.burger-icon div {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.nav-active {
+  display: flex !important;
+  transform: translateX(0%);
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Base styles above */
+
+@media (max-width: 768px) {
+  .burger-icon {
+    display: block;
+  }
+
+  .slide-in-right {
+    transform: translateX(-50%);
+  }
+
+  .header-container {
+    display: flex;
+    margin: 12px auto;
+    /* width: 981px; */
+    padding: 14px 20px;
+    justify-content: space-between;
+    border-radius: 1900.8px;
+    background: rgba(30, 71, 111, 0.55);
+    backdrop-filter: blur(10px);
+    white-space: nowrap;
+  }
+
+  .header-container .logo {
+    margin-right: 1rem;
+    width: 105px;
+    height: 32px;
+    background-image: url("logo-short.svg");
+    background-repeat: no-repeat;
+  }
+
+  .header-container nav {
+    position: absolute;
+    bottom: -200px;
+    left: 0;
+    width: 100%;
+    border-radius: 24px;
+    background: rgba(30, 71, 111, 0.55);
+  }
+
+  .header-container .nav-list li {
+    padding: 8px 0;
+  }
+
+  .header-container .nav-list {
+    flex-direction: column;
+    padding: 14px 0;
+    display: none;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+  .header-container .nav-list li a {
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+  }
+
+  .container {
+    margin: 0 auto;
+    padding: unset;
+  }
+
+  header {
+    width: 90%;
+    padding: 0 1rem;
+    margin: 0 auto;
+  }
+
+  .subtitle {
+    font-size: 52px;
+    line-height: 64px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .hero-text-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .contact-button {
+    align-self: unset;
+  }
+
+  .about-container {
+    padding-bottom: 4rem;
+  }
+
+  .about-container-first {
+    height: unset;
+    display: block;
+  }
+
+  .about-subcontainer-first {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .block-name-container {
+    padding: 1rem;
+    margin-bottom: unset !important;
+    justify-content: flex-start !important;
+    width: unset;
+  }
+
+  .about-subtitle-container {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .about-container-second {
+    display: block;
+    height: unset;
+  }
+
+  .about-second {
+    box-shadow: unset;
+  }
+
+  .about-third div {
+    margin: unset;
+    padding: 1rem;
+  }
+
+  .about-third h1 {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .about-fourth p {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .about-fifth p {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .about-sixth p {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .about-nineth p {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .about-eighth p {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .about-container-third {
+    display: block;
+  }
+
+  .about-fourth {
+    height: unset;
+    padding: 1rem;
+  }
+
+  .about-fifth {
+    height: unset;
+    padding: 1rem;
+  }
+
+  .about-sixth {
+    height: unset;
+    padding: 1rem;
+  }
+
+  .about-seventh {
+    height: unset;
+    padding-top: unset;
+  }
+
+  .about-seventh div {
+    width: unset !important;
+    padding: 1rem;
+  }
+
+  .about-subcontainer-fourth {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .about-eighth {
+    height: unset;
+    padding: 1rem;
+    margin-top: unset;
+  }
+
+  .about-nineth {
+    height: unset;
+    padding: 1rem;
+  }
+
+  .services-subcontainer {
+    display: block;
+    padding: 1rem;
+  }
+
+  .services-cardcontainer {
+    display: block;
+  }
+
+  .services-card {
+    width: unset;
+    height: unset;
+  }
+
+  .services-card h1 {
+    padding: 1rem;
+  }
+
+  .services-card p {
+    padding: 0 6rem 1rem 1rem;
+    font-size: 20px;
+  }
+
+  .service-img {
+    height: 80px;
+  }
+
+  .projects-desciption {
+    flex-direction: column-reverse;
+    height: unset;
+    gap: unset;
+  }
+
+  .projects-desciption .projects-subtitle {
+    height: unset;
+    width: unset;
+    padding: 1rem;
+  }
+
+  .projects-customer-title {
+    width: unset;
+    height: unset;
+    padding: 1rem;
+  }
+
+  .benefits-row-one {
+    display: block;
+    padding: 0 1rem;
+    margin-bottom: unset;
+  }
+
+  .benefits-row-two {
+    display: block;
+    padding: 0 1rem;
+  }
+
+  .benefits-card {
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+    height: unset;
+  }
+
+  .benefits-card h1 {
+    line-height: unset;
+    width: unset;
+    height: unset;
+    font-size: 36px;
+  }
+
+  .benefits-card p {
+    width: unset;
+    line-height: 28px;
+    font-size: 20px;
+  }
+
+  .contact-container {
+    display: block;
+    height: unset;
+  }
+
+  .contact-subcontainer {
+    flex-direction: column;
+    margin-top: unset;
+    padding: 1rem;
+  }
+
+  .contact-form-container h2 {
+    width: unset;
+    height: unset;
+  }
+
+  .contact-form-container input {
+    width: calc(100% - 1rem);
+    height: 40px;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  .contact-form-container textarea {
+    width: calc(100% - 1rem);
+    font-size: 20px;
+    min-height: 128px;
+    margin-bottom: 20px;
+  }
+
+  .contact-form-container button {
+    position: unset;
+  }
+  
+  .footer-container {
+    display: block;
+  }
+
+  .footer-main {
+    display: block;
+    height: unset;
+    padding: 1rem;
+    margin: 20px 0;
+  }
+  
+  .footer-logo .logo {
+    background-image: url(logo-long.svg);
+    width: unset;
+    height: 60px;
+    margin-right: unset;
+  }
+
+  .footer-logo p {
+    width: unset;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .footer-contact-info p {
+    font-size: 20px;
+  }
+  
+  .footer-legal {
+    padding: 1rem;
+  }
+
+  .footer-nav a {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .footer-legal-info a {
+    font-size: 16px;
+  }
+
+  .footer-legal p {
+    font-size: 16px;
+  }
 }

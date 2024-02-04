@@ -9,7 +9,7 @@ contact_button.addEventListener("mousemove", (e) => {
 
 document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", function () {
-        if (Math.round(window.scrollY) > 20) {
+        if (Math.round(window.scrollY) > 20 && window.innerWidth > 768 ) {
             document.querySelector(".header-container").classList.add("scrolled");
         } else {
             document.querySelector(".header-container").classList.remove("scrolled");
@@ -17,27 +17,27 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-document
-    .getElementById("contact-form")
-    .addEventListener("submit", function (event) {
-        event.preventDefault();
+// document
+//     .getElementById("contact-form")
+//     .addEventListener("submit", function (event) {
+//         event.preventDefault();
 
-        const formData = new FormData(this);
+//         const formData = new FormData(this);
 
-        fetch(this.action, {
-            method: "POST",
-            body: formData, // sending the form data directly
-            mode: "no-cors",
-        })
-            .then(() => {
-                // The response is opaque, so we don't try to parse it
-                alert("Message sent successfully!");
-            })
-            .catch((error) => {
-                console.error("Error:", error);
-                alert("There was an error sending the message.");
-            });
-    });
+//         fetch(this.action, {
+//             method: "POST",
+//             body: formData, // sending the form data directly
+//             mode: "no-cors",
+//         })
+//             .then(() => {
+//                 // The response is opaque, so we don't try to parse it
+//                 alert("Message sent successfully!");
+//             })
+//             .catch((error) => {
+//                 console.error("Error:", error);
+//                 alert("There was an error sending the message.");
+//             });
+//     });
 
 document.querySelectorAll('.block-name-container').forEach(container => {
     let interval;
@@ -110,3 +110,36 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(block);
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const burger = document.querySelector('.burger-icon');
+    const nav = document.querySelector('.nav-list');
+  
+    burger.addEventListener('click', () => {
+      // Check if nav is active
+      const isActive = nav.classList.contains('nav-active');
+  
+      if (isActive) {
+        // Begin the transition out
+        nav.style.display = 'flex';
+        requestAnimationFrame(() => {
+          nav.classList.remove('nav-active');
+        });
+  
+        // Use a timeout to match the CSS transition duration
+        setTimeout(() => {
+          nav.style.display = 'none';
+        }, 500); // Match your CSS transition time
+      } else {
+        // Display first, then add the class for the transition
+        nav.style.display = 'flex';
+        requestAnimationFrame(() => {
+          nav.classList.add('nav-active');
+        });
+      }
+      
+      // Burger Animation
+      burger.classList.toggle('toggle');
+    });
+  });
+  
