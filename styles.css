@@ -683,7 +683,6 @@ header {
 }
 
 .projects-desciption {
-  height: 200px;
   display: flex;
   gap: 80px;
 }
@@ -691,8 +690,11 @@ header {
 .projects-desciption .projects-subtitle {
   display: flex;
   align-items: center;
-  height: 200px;
-  width: 70%;
+  padding: 2rem;
+}
+
+.projects-desciption .projects-subtitle h1 {
+  font-size: 48px;
 }
 
 .projects-customer-title {
@@ -708,6 +710,45 @@ header {
   top: 0px;
   white-space: nowrap;
   width: 1600px;
+}
+
+.projects-carousel {
+  overflow: hidden; 
+  position: relative;
+  width: 100%;
+  max-width: 1600px; 
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.carousel-1 {
+  display: flex;
+  gap: 20px;
+  position: relative; 
+  will-change: transform;
+}
+
+.carousel-2 {
+  display: flex;
+  gap: 20px;
+  position: relative; 
+  will-change: transform;
+}
+
+.carousel-item {
+  border-radius: 16px;
+  width: 640px;
+  height: 384px;
+  flex-shrink: 0;
+  
+}
+
+.carousel-item img {
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
 }
 
 .benefits-row-one {
@@ -833,11 +874,11 @@ header {
   color: #fff;
 }
 
-#contact-form input{
+#contact-form input {
   color: inherit;
 }
 
-#contact-form textarea{
+#contact-form textarea {
   color: inherit;
 }
 
@@ -1294,7 +1335,7 @@ footer {
   .contact-form-container button {
     position: unset;
   }
-  
+
   .footer-container {
     display: block;
   }
@@ -1305,7 +1346,7 @@ footer {
     padding: 1rem;
     margin: 20px 0;
   }
-  
+
   .footer-logo .logo {
     background-image: url(logo-long.svg);
     width: unset;
@@ -1322,7 +1363,7 @@ footer {
   .footer-contact-info p {
     font-size: 20px;
   }
-  
+
   .footer-legal {
     padding: 1rem;
   }

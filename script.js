@@ -143,3 +143,43 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
   
+  window.addEventListener('scroll', () => {
+    const carousel = document.querySelector('.carousel-1');
+    const carouselRect = carousel.getBoundingClientRect(); // Get carousel's position relative to viewport
+    const windowHeight = window.innerHeight;
+    const isInView = carouselRect.top < windowHeight && carouselRect.bottom > 0; // Check if carousel is in the viewport
+  
+    if (isInView) {
+      // Calculate how far the carousel is from being at the top of the viewport
+      const distanceFromTopOfViewport = carouselRect.top;
+      const percentageInView = Math.max(0, 1 - (distanceFromTopOfViewport / windowHeight));
+  
+      // Use this percentage to scale the translateX movement
+      const baseTranslateX = -300; // Starting point for translateX
+      const maxTranslateX = 200; // Maximum translateX value you want to allow
+      const translateXMovement = baseTranslateX + (maxTranslateX * percentageInView); // Calculate new translateX
+  
+      carousel.style.transform = `translateX(${translateXMovement}px)`;
+    }
+  });
+  
+  window.addEventListener('scroll', () => {
+    const carousel = document.querySelector('.carousel-2');
+    const carouselRect = carousel.getBoundingClientRect(); // Get carousel's position relative to viewport
+    const windowHeight = window.innerHeight;
+    const isInView = carouselRect.top < windowHeight && carouselRect.bottom > 0; // Check if carousel is in the viewport
+  
+    if (isInView) {
+      // Calculate how far the carousel is from being at the top of the viewport
+      const distanceFromTopOfViewport = carouselRect.top;
+      const percentageInView = Math.max(0, 1 - (distanceFromTopOfViewport / windowHeight));
+  
+      // Use this percentage to scale the translateX movement
+      const baseTranslateX = 0; // Starting point for translateX
+      const maxTranslateX = -250; // Maximum translateX value you want to allow
+      const translateXMovement = baseTranslateX + (maxTranslateX * percentageInView); // Calculate new translateX
+  
+      carousel.style.transform = `translateX(${translateXMovement}px)`;
+    }
+  });
+  
