@@ -7,6 +7,20 @@ contact_button.addEventListener("mousemove", (e) => {
     contact_button.style.setProperty("--y", y + "px");
 });
 
+const serviceCards = document.querySelectorAll(".services-card");
+
+serviceCards.forEach(card => {
+    card.addEventListener("mousemove", (e) => {
+        let rect = card.getBoundingClientRect();
+        let x = e.clientX - rect.left;
+        let y = e.clientY - rect.top;
+
+        card.style.setProperty("--x", x + "px");
+        card.style.setProperty("--y", y + "px");
+    });
+});
+
+
 document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", function () {
         if (Math.round(window.scrollY) > 20 && window.innerWidth > 768 ) {
@@ -141,5 +155,45 @@ document.addEventListener('DOMContentLoaded', () => {
       // Burger Animation
       burger.classList.toggle('toggle');
     });
+  });
+  
+  window.addEventListener('scroll', () => {
+    const carousel = document.querySelector('.carousel-1');
+    const carouselRect = carousel.getBoundingClientRect(); // Get carousel's position relative to viewport
+    const windowHeight = window.innerHeight;
+    const isInView = carouselRect.top < windowHeight && carouselRect.bottom > 0; // Check if carousel is in the viewport
+  
+    if (isInView) {
+      // Calculate how far the carousel is from being at the top of the viewport
+      const distanceFromTopOfViewport = carouselRect.top;
+      const percentageInView = Math.max(0, 1 - (distanceFromTopOfViewport / windowHeight));
+  
+      // Use this percentage to scale the translateX movement
+      const baseTranslateX = -300; // Starting point for translateX
+      const maxTranslateX = 200; // Maximum translateX value you want to allow
+      const translateXMovement = baseTranslateX + (maxTranslateX * percentageInView); // Calculate new translateX
+  
+      carousel.style.transform = `translateX(${translateXMovement}px)`;
+    }
+  });
+  
+  window.addEventListener('scroll', () => {
+    const carousel = document.querySelector('.carousel-2');
+    const carouselRect = carousel.getBoundingClientRect(); // Get carousel's position relative to viewport
+    const windowHeight = window.innerHeight;
+    const isInView = carouselRect.top < windowHeight && carouselRect.bottom > 0; // Check if carousel is in the viewport
+  
+    if (isInView) {
+      // Calculate how far the carousel is from being at the top of the viewport
+      const distanceFromTopOfViewport = carouselRect.top;
+      const percentageInView = Math.max(0, 1 - (distanceFromTopOfViewport / windowHeight));
+  
+      // Use this percentage to scale the translateX movement
+      const baseTranslateX = 0; // Starting point for translateX
+      const maxTranslateX = -250; // Maximum translateX value you want to allow
+      const translateXMovement = baseTranslateX + (maxTranslateX * percentageInView); // Calculate new translateX
+  
+      carousel.style.transform = `translateX(${translateXMovement}px)`;
+    }
   });
   

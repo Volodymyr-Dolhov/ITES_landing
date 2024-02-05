@@ -152,7 +152,7 @@ header {
 
 .scrolled.header-container .logo {
   margin-right: 1rem;
-  width: 105px;
+  width: 124px;
   height: 32px;
   background-image: url("logo-short.svg");
   background-repeat: no-repeat;
@@ -189,7 +189,7 @@ header {
 
 .logo {
   margin-right: 1rem;
-  width: 227px;
+  width: 232px;
   height: 34px;
   background-image: url("logo-long.svg");
   background-repeat: no-repeat;
@@ -503,6 +503,7 @@ header {
 }
 
 .services-card {
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -513,6 +514,25 @@ header {
   background: #133852;
   border-radius: 16px;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.services-card::before {
+  --size: 0;
+  content: "";
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  background: radial-gradient(circle closest-side, #1f1beb, transparent);
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease;
+  z-index: 0;
+}
+
+.services-card:hover::before {
+  --size: 200px;
 }
 
 .services-card h1 {
@@ -522,6 +542,8 @@ header {
   font-style: normal;
   font-weight: 500;
   line-height: 46px;
+  position: relative;
+  z-index: 2;
 }
 
 .services-card p {
@@ -530,6 +552,8 @@ header {
   font-size: 26px;
   font-style: normal;
   font-weight: 300;
+  position: relative;
+  z-index: 2;
 }
 
 .services-card img {
@@ -539,7 +563,6 @@ header {
 }
 
 .projects-desciption {
-  height: 200px;
   display: flex;
   gap: 80px;
 }
@@ -547,8 +570,11 @@ header {
 .projects-desciption .projects-subtitle {
   display: flex;
   align-items: center;
-  height: 200px;
-  width: 70%;
+  padding: 2rem;
+}
+
+.projects-desciption .projects-subtitle h1 {
+  font-size: 48px;
 }
 
 .projects-customer-title {
@@ -564,6 +590,76 @@ header {
   top: 0px;
   white-space: nowrap;
   width: 1600px;
+  margin-bottom: 2rem;
+}
+
+.projects-customer-container {
+  display: flex;
+  gap: 20px;
+}
+
+.customer-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 247px;
+  height: 164px;
+  border-radius: 16px;
+  border: 1px solid #aab2ca;
+}
+
+.customer-card img {
+  transition: filter 0.5s ease; /* Smooth transition for the filter */
+  filter: grayscale(100%);
+}
+
+.customer-card:hover img {
+  filter: none; /* Remove the filter on hover, showing the image in full color */
+}
+
+.customer-card:hover {
+  box-shadow: 10px 10px 15px 0px #00000026;
+  border-color: transparent;
+  transition: 0.3s ease-in-out;
+  background: #ececec5e;
+}
+
+.projects-carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 1600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.carousel-1 {
+  display: flex;
+  gap: 20px;
+  position: relative;
+  will-change: transform;
+}
+
+.carousel-2 {
+  display: flex;
+  gap: 20px;
+  position: relative;
+  will-change: transform;
+}
+
+.carousel-item {
+  border-radius: 16px;
+  width: 640px;
+  /* height: 384px; */
+  flex-shrink: 0;
+}
+
+.carousel-item img {
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
 }
 
 .benefits-row-one {
@@ -588,6 +684,13 @@ header {
   border-radius: 16px;
   height: 526px;
   padding: 0 2.5rem;
+}
+
+.benefits-card:hover {
+  box-shadow: 10px 10px 15px 0px #00000026;
+  border-color: transparent;
+  transition: 0.3s ease-in-out;
+  background: #ececec5e;
 }
 
 .benefits-card h1 {
@@ -689,11 +792,11 @@ header {
   color: #fff;
 }
 
-#contact-form input{
+#contact-form input {
   color: inherit;
 }
 
-#contact-form textarea{
+#contact-form textarea {
   color: inherit;
 }
 
@@ -858,7 +961,7 @@ footer {
 
   .header-container .logo {
     margin-right: 1rem;
-    width: 105px;
+    width: 124px;
     height: 32px;
     background-image: url("logo-short.svg");
     background-repeat: no-repeat;
@@ -1002,6 +1105,13 @@ footer {
     font-size: 20px;
   }
 
+  .carousel-item {
+    border-radius: 16px;
+    width: 320px;
+    height: 192px;
+    flex-shrink: 0;
+  }
+
   .contact-container {
     display: block;
     height: unset;
@@ -1035,7 +1145,7 @@ footer {
   .contact-form-container button {
     position: unset;
   }
-  
+
   .footer-container {
     display: block;
   }
@@ -1046,7 +1156,7 @@ footer {
     padding: 1rem;
     margin: 20px 0;
   }
-  
+
   .footer-logo .logo {
     background-image: url(logo-long.svg);
     width: unset;
@@ -1063,7 +1173,7 @@ footer {
   .footer-contact-info p {
     font-size: 20px;
   }
-  
+
   .footer-legal {
     padding: 1rem;
   }
