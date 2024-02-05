@@ -664,7 +664,6 @@ header {
 .projects-desciption .projects-subtitle {
   display: flex;
   align-items: center;
-  padding: 2rem;
 }
 
 .projects-desciption .projects-subtitle h1 {
@@ -1154,6 +1153,51 @@ footer {
 
   .contact-button {
     align-self: unset;
+  }
+
+  .about-container-first {
+    padding: 1rem;
+    display: block;
+  }
+
+  .about-first .subtitle {
+    width: unset;
+  }
+
+  .about-second p {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .about-container-third {
+    flex-direction: column-reverse;
+    margin-bottom: unset;
+    padding: 1rem;
+  }
+
+  .about-card-1, .about-card-2, .about-card-3, .about-card-4, .about-card-5, .about-card-6 {
+    width: unset;
+    min-height: unset;
+  }
+  
+  .about-card-3 h1 {
+    padding: 2rem 3rem 0 3rem;
+  }
+
+  .about-card-4 p {
+    font-size: 20px;
+  }
+
+  .about-card-4 h1 {
+    font-size: 32px;
+  }
+
+  .about-card-6 p {
+    font-size: 20px;
+  }
+
+  .about-card-6 h1 {
+    font-size: 32px;
   }
 
   .services-subcontainer {
