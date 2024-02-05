@@ -1,6 +1,6 @@
 :root {
   --black: #000000;
-  --black-rock: #0c0b39;
+  --black-rock: #133852;
   --cadet-blue: #aab2ca;
   --dove-gray: #6c6c6d;
   --gray02100: #ffffff;
@@ -227,7 +227,7 @@ header {
   height: 32px;
   padding: 6px 12px;
   border-radius: 16px;
-  background: #0c0b39;
+  background: #133852;
   color: #fff;
   font-size: 18px;
   font-style: normal;
@@ -250,7 +250,7 @@ header {
   height: 52px;
   padding: 10px 20px;
   border-radius: 24px;
-  background: #0c0b39;
+  background: #133852;
   color: #fefeff;
   font-size: 18px;
   font-weight: 600;
@@ -654,7 +654,7 @@ header {
   position: relative;
   width: 760px;
   height: 420px;
-  background: #0c0b39;
+  background: #133852;
   border-radius: 16px;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 }
@@ -824,6 +824,21 @@ header {
   overflow: hidden;
   padding: 10px 20px;
   width: 245px;
+  font-size: 20px;
+  color: #000;
+  font-weight: 600;
+}
+
+#contact-form {
+  color: #fff;
+}
+
+#contact-form input{
+  color: inherit;
+}
+
+#contact-form textarea{
+  color: inherit;
 }
 
 .contact-image-container {
