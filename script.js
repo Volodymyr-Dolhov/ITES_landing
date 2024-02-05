@@ -7,6 +7,15 @@ contact_button.addEventListener("mousemove", (e) => {
     contact_button.style.setProperty("--y", y + "px");
 });
 
+let submit_button = document.querySelector(".submit-button");
+submit_button.addEventListener("mousemove", (e) => {
+    let rect = submit_button.getBoundingClientRect();
+    let x = e.clientX - rect.left;
+    let y = e.clientY - rect.top;
+    submit_button.style.setProperty("--x", x + "px");
+    submit_button.style.setProperty("--y", y + "px");
+});
+
 const serviceCards = document.querySelectorAll(".services-card");
 
 serviceCards.forEach(card => {
