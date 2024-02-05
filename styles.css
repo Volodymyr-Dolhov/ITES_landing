@@ -292,6 +292,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 140px;
 }
 
 .content {
@@ -416,7 +417,7 @@ header {
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  margin-bottom: 80px;
+  margin-bottom: 140px;
 }
 
 .about-container-fourth {
@@ -582,18 +583,18 @@ header {
   padding: 0 3rem 2rem 3rem;
 }
 
-
 .services-subcontainer {
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 20px;
+  margin-bottom: 140px;
 }
 
 .services-cardcontainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 80px;
+  gap: 20px;
 }
 
 .services-card {
@@ -603,7 +604,7 @@ header {
   justify-content: flex-start;
   align-items: start;
   position: relative;
-  width: 760px;
+  width: 790px;
   height: 420px;
   background: #133852;
   border-radius: 16px;
@@ -631,7 +632,7 @@ header {
 
 .services-card h1 {
   color: #fff;
-  padding: 2rem 16rem 0 4rem;
+  padding: 2rem 14rem 0 6rem;
   font-size: 36px;
   font-style: normal;
   font-weight: 500;
@@ -642,10 +643,10 @@ header {
 
 .services-card p {
   color: #ffffff;
-  padding: 0 8rem 0 4rem;
+  padding: 0 6rem 0 6rem;
   font-size: 26px;
-  font-style: normal;
   font-weight: 300;
+  line-height: 36px;
   position: relative;
   z-index: 2;
 }
@@ -690,6 +691,7 @@ header {
 .projects-customer-container {
   display: flex;
   gap: 20px;
+  margin-bottom: 140px;
 }
 
 .customer-card {
@@ -768,7 +770,7 @@ header {
   justify-content: space-between;
   gap: 24px;
   padding: 0 200px;
-  margin-bottom: 40px;
+  margin-bottom: 140px;
 }
 
 .benefits-card {
