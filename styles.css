@@ -537,6 +537,7 @@ header {
 .about-card-4 p {
   color: var(--black);
   font-size: 24px;
+  line-height: 36px;
   font-weight: 300;
   line-height: 38px;
   padding: 0 3rem 2rem 3rem;
@@ -579,7 +580,7 @@ header {
   color: var(--black);
   font-size: 24px;
   font-weight: 300;
-  line-height: 38px;
+  line-height: 36px;
   padding: 0 3rem 2rem 3rem;
 }
 
@@ -1092,6 +1093,7 @@ footer {
 
   .hero-container .block-name-container {
     padding: unset;
+    margin-bottom: 40px;
   }
 
   .header-container nav {
@@ -1175,6 +1177,7 @@ footer {
     flex-direction: column-reverse;
     margin-bottom: unset;
     padding: 1rem;
+    margin-bottom: 40px;
   }
 
   .about-card-1, .about-card-2, .about-card-3, .about-card-4, .about-card-5, .about-card-6 {
@@ -1205,6 +1208,7 @@ footer {
   .services-subcontainer {
     gap: 1rem;
     padding: 1rem;
+    margin-bottom: 40px;
   }
 
   .services-cardcontainer {
@@ -1262,6 +1266,7 @@ footer {
     padding: 1rem;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin-bottom: 40px;
   }
 
   .customer-card {
@@ -1279,6 +1284,7 @@ footer {
   .benefits-row-two {
     display: block;
     padding: 0 1rem;
+    margin-bottom: 40px;
   }
 
   .benefits-card {
