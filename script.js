@@ -7,6 +7,20 @@ contact_button.addEventListener("mousemove", (e) => {
     contact_button.style.setProperty("--y", y + "px");
 });
 
+const serviceCards = document.querySelectorAll(".services-card");
+
+serviceCards.forEach(card => {
+    card.addEventListener("mousemove", (e) => {
+        let rect = card.getBoundingClientRect();
+        let x = e.clientX - rect.left;
+        let y = e.clientY - rect.top;
+
+        card.style.setProperty("--x", x + "px");
+        card.style.setProperty("--y", y + "px");
+    });
+});
+
+
 document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", function () {
         if (Math.round(window.scrollY) > 20 && window.innerWidth > 768 ) {

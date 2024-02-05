@@ -152,7 +152,7 @@ header {
 
 .scrolled.header-container .logo {
   margin-right: 1rem;
-  width: 105px;
+  width: 124px;
   height: 32px;
   background-image: url("logo-short.svg");
   background-repeat: no-repeat;
@@ -189,7 +189,7 @@ header {
 
 .logo {
   margin-right: 1rem;
-  width: 227px;
+  width: 232px;
   height: 34px;
   background-image: url("logo-long.svg");
   background-repeat: no-repeat;
@@ -410,6 +410,7 @@ header {
 }
 
 .services-card {
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -420,6 +421,25 @@ header {
   background: #133852;
   border-radius: 16px;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.services-card::before {
+  --size: 0;
+  content: "";
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  background: radial-gradient(circle closest-side, #1f1beb, transparent);
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease;
+  z-index: 0;
+}
+
+.services-card:hover::before {
+  --size: 200px;
 }
 
 .services-card h1 {
@@ -429,6 +449,8 @@ header {
   font-style: normal;
   font-weight: 500;
   line-height: 46px;
+  position: relative;
+  z-index: 2;
 }
 
 .services-card p {
@@ -437,6 +459,8 @@ header {
   font-size: 26px;
   font-style: normal;
   font-weight: 300;
+  position: relative;
+  z-index: 2;
 }
 
 .services-card img {
@@ -476,10 +500,10 @@ header {
 }
 
 .projects-carousel {
-  overflow: hidden; 
+  overflow: hidden;
   position: relative;
   width: 100%;
-  max-width: 1600px; 
+  max-width: 1600px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -489,23 +513,22 @@ header {
 .carousel-1 {
   display: flex;
   gap: 20px;
-  position: relative; 
+  position: relative;
   will-change: transform;
 }
 
 .carousel-2 {
   display: flex;
   gap: 20px;
-  position: relative; 
+  position: relative;
   will-change: transform;
 }
 
 .carousel-item {
   border-radius: 16px;
   width: 640px;
-  height: 384px;
+  /* height: 384px; */
   flex-shrink: 0;
-  
 }
 
 .carousel-item img {
@@ -536,6 +559,13 @@ header {
   border-radius: 16px;
   height: 526px;
   padding: 0 2.5rem;
+}
+
+.benefits-card:hover {
+  box-shadow: 10px 10px 15px 0px #00000026;
+  border-color: transparent;
+  transition: 0.3s ease-in-out;
+  background: #ECECEC5E;
 }
 
 .benefits-card h1 {
@@ -806,7 +836,7 @@ footer {
 
   .header-container .logo {
     margin-right: 1rem;
-    width: 105px;
+    width: 124px;
     height: 32px;
     background-image: url("logo-short.svg");
     background-repeat: no-repeat;
@@ -948,6 +978,13 @@ footer {
     width: unset;
     line-height: 28px;
     font-size: 20px;
+  }
+
+  .carousel-item {
+    border-radius: 16px;
+    width: 320px;
+    height: 192px;
+    flex-shrink: 0;
   }
 
   .contact-container {
