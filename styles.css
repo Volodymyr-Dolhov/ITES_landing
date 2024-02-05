@@ -497,6 +497,38 @@ header {
   top: 0px;
   white-space: nowrap;
   width: 1600px;
+  margin-bottom: 2rem;
+}
+
+.projects-customer-container {
+  display: flex;
+  gap: 20px;
+}
+
+.customer-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 247px;
+  height: 164px;
+  border-radius: 16px;
+  border: 1px solid #aab2ca;
+}
+
+.customer-card img {
+  transition: filter 0.5s ease; /* Smooth transition for the filter */
+  filter: grayscale(100%);
+}
+
+.customer-card:hover img {
+  filter: none; /* Remove the filter on hover, showing the image in full color */
+}
+
+.customer-card:hover {
+  box-shadow: 10px 10px 15px 0px #00000026;
+  border-color: transparent;
+  transition: 0.3s ease-in-out;
+  background: #ececec5e;
 }
 
 .projects-carousel {
@@ -565,7 +597,7 @@ header {
   box-shadow: 10px 10px 15px 0px #00000026;
   border-color: transparent;
   transition: 0.3s ease-in-out;
-  background: #ECECEC5E;
+  background: #ececec5e;
 }
 
 .benefits-card h1 {
