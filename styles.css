@@ -24,7 +24,7 @@
 
 @font-face {
   font-family: "Montserrat";
-  src: url("./Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+  src: url("./media/fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
 }
 
 * {
@@ -154,7 +154,7 @@ header {
   margin-right: 1rem;
   width: 124px;
   height: 32px;
-  background-image: url("logo-short.svg");
+  background-image: url("./media/logos/logo-short.svg");
   background-repeat: no-repeat;
 }
 
@@ -191,7 +191,7 @@ header {
   margin-right: 1rem;
   width: 232px;
   height: 34px;
-  background-image: url("logo-long.svg");
+  background-image: url("./media/logos/logo-long.svg");
   background-repeat: no-repeat;
 }
 
@@ -941,7 +941,7 @@ footer {
 .footer-logo .logo {
   width: 540px;
   height: 80px;
-  background-image: url("logo-footer.svg");
+  background-image: url("./media/logos/logo-footer.svg");
   background-repeat: no-repeat;
 }
 
@@ -1078,7 +1078,7 @@ footer {
     margin-right: 1rem;
     width: 124px;
     height: 32px;
-    background-image: url("logo-short.svg");
+    background-image: url("./media/logos/logo-short.svg");
     background-repeat: no-repeat;
   }
 
@@ -1373,7 +1373,7 @@ footer {
   }
 
   .footer-logo .logo {
-    background-image: url(logo-long.svg);
+    background-image: url("./media/logos/logo-long.svg");
     width: unset;
     height: 60px;
     margin-right: unset;
