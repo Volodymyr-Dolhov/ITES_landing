@@ -184,6 +184,10 @@ header {
   justify-content: center;
 }
 
+.scrolled.header-container .nav-list li:nth-child(5) {
+  display: none;
+}
+
 .scrolled.header-container .nav-list li a {
   color: #fff;
   font-size: 18px;
