@@ -24,7 +24,8 @@
 
 @font-face {
   font-family: "Montserrat";
-  src: url("./media/fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+  src: url("./media/fonts/Montserrat/Montserrat-VariableFont_wght.ttf")
+    format("truetype");
 }
 
 * {
@@ -253,7 +254,7 @@ header {
   transition: 0.5s ease-in;
 }
 
-.nav-list li :nth-child(5) {
+.nav-list li:nth-child(5) {
   display: none;
 }
 
@@ -459,7 +460,7 @@ header {
 .about-card-1 {
   flex: 2;
   width: 400px;
-  background-color: #E8E8DF;
+  background-color: #e8e8df;
   border-radius: 30px;
   min-height: 480px;
 }
@@ -483,7 +484,7 @@ header {
 .about-card-2 {
   flex: 1;
   width: 400px;
-  background-color: #E8E8DF;
+  background-color: #e8e8df;
   border-radius: 30px;
   min-height: 320px;
 }
@@ -508,7 +509,7 @@ header {
 .about-card-3 {
   flex: 1;
   width: 580px;
-  background-color: #E8E8DF;
+  background-color: #e8e8df;
   border-radius: 30px;
   min-height: 320px;
 }
@@ -533,7 +534,7 @@ header {
 .about-card-4 {
   flex: 2;
   width: 580px;
-  background-color: #E8E8DF;
+  background-color: #e8e8df;
   border-radius: 30px;
   min-height: 480px;
 }
@@ -558,7 +559,7 @@ header {
 .about-card-5 {
   flex: 1;
   width: 580px;
-  background-color: #E8E8DF;
+  background-color: #e8e8df;
   border-radius: 30px;
   min-height: 400px;
   display: flex;
@@ -575,7 +576,7 @@ header {
 .about-card-6 {
   flex: 1;
   width: 580px;
-  background-color: #E8E8DF;
+  background-color: #e8e8df;
   border-radius: 30px;
   min-height: 400px;
 }
@@ -1162,8 +1163,8 @@ footer {
   .contact-button-header {
     display: none;
   }
-  
-  .nav-list li :nth-child(5) {
+
+  .nav-list li:nth-child(5) {
     display: block;
   }
 
@@ -1188,11 +1189,16 @@ footer {
     margin-bottom: 40px;
   }
 
-  .about-card-1, .about-card-2, .about-card-3, .about-card-4, .about-card-5, .about-card-6 {
+  .about-card-1,
+  .about-card-2,
+  .about-card-3,
+  .about-card-4,
+  .about-card-5,
+  .about-card-6 {
     width: unset;
     min-height: unset;
   }
-  
+
   .about-card-3 h1 {
     padding: 2rem 3rem 0 3rem;
   }
