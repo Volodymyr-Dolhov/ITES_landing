@@ -244,7 +244,7 @@ header {
   transition: 0.5s ease-in;
 }
 
-.contact-button-mobile-header {
+.nav-list li :nth-child(5) {
   display: none;
 }
 
@@ -1154,7 +1154,7 @@ footer {
     display: none;
   }
   
-  .contact-button-mobile-header {
+  .nav-list li :nth-child(5) {
     display: block;
   }
 
