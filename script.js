@@ -32,7 +32,7 @@ serviceCards.forEach(card => {
 
 document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", function () {
-        if (Math.round(window.scrollY) > 20 && window.innerWidth > 768 ) {
+        if (Math.round(window.scrollY) > 20 && window.innerWidth > 768) {
             document.querySelector(".header-container").classList.add("scrolled");
         } else {
             document.querySelector(".header-container").classList.remove("scrolled");
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('in-view');
-            } 
+            }
             // else {
             //     entry.target.classList.remove('in-view');
             // }
@@ -137,72 +137,84 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener('DOMContentLoaded', () => {
     const burger = document.querySelector('.burger-icon');
     const nav = document.querySelector('.nav-list');
-  
+
+    function toggleNav() {
+        const isActive = nav.classList.contains('nav-active');
+
+        if (isActive) {
+            // Close the navigation
+            nav.classList.remove('nav-active');
+            setTimeout(() => {
+                nav.style.display = 'none';
+            }, 500); // Ensure this matches your CSS transition time
+        } else {
+            // Open the navigation
+            nav.style.display = 'flex';
+            requestAnimationFrame(() => {
+                nav.classList.add('nav-active');
+            });
+        }
+
+        // Always toggle the burger icon
+        burger.classList.toggle('toggle');
+    }
+
     burger.addEventListener('click', () => {
-      // Check if nav is active
-      const isActive = nav.classList.contains('nav-active');
-  
-      if (isActive) {
-        // Begin the transition out
-        nav.style.display = 'flex';
-        requestAnimationFrame(() => {
-          nav.classList.remove('nav-active');
-        });
-  
-        // Use a timeout to match the CSS transition duration
-        setTimeout(() => {
-          nav.style.display = 'none';
-        }, 500); // Match your CSS transition time
-      } else {
-        // Display first, then add the class for the transition
-        nav.style.display = 'flex';
-        requestAnimationFrame(() => {
-          nav.classList.add('nav-active');
-        });
-      }
-      
-      // Burger Animation
-      burger.classList.toggle('toggle');
+        toggleNav();
     });
-  });
-  
-  window.addEventListener('scroll', () => {
+
+    // Close nav when clicking inside or outside nav, but not when clicking on the burger
+    document.addEventListener('click', (event) => {
+        const isClickInsideNav = nav.contains(event.target);
+        const isClickInsideBurger = burger.contains(event.target);
+
+        if (nav.classList.contains('nav-active') && !isClickInsideBurger) {
+            if (isClickInsideNav || !isClickInsideNav) {
+                toggleNav();
+            }
+        }
+    });
+});
+
+
+
+
+window.addEventListener('scroll', () => {
     const carousel = document.querySelector('.carousel-1');
     const carouselRect = carousel.getBoundingClientRect(); // Get carousel's position relative to viewport
     const windowHeight = window.innerHeight;
     const isInView = carouselRect.top < windowHeight && carouselRect.bottom > 0; // Check if carousel is in the viewport
-  
+
     if (isInView) {
-      // Calculate how far the carousel is from being at the top of the viewport
-      const distanceFromTopOfViewport = carouselRect.top;
-      const percentageInView = Math.max(0, 1 - (distanceFromTopOfViewport / windowHeight));
-  
-      // Use this percentage to scale the translateX movement
-      const baseTranslateX = -300; // Starting point for translateX
-      const maxTranslateX = 200; // Maximum translateX value you want to allow
-      const translateXMovement = baseTranslateX + (maxTranslateX * percentageInView); // Calculate new translateX
-  
-      carousel.style.transform = `translateX(${translateXMovement}px)`;
+        // Calculate how far the carousel is from being at the top of the viewport
+        const distanceFromTopOfViewport = carouselRect.top;
+        const percentageInView = Math.max(0, 1 - (distanceFromTopOfViewport / windowHeight));
+
+        // Use this percentage to scale the translateX movement
+        const baseTranslateX = -300; // Starting point for translateX
+        const maxTranslateX = 200; // Maximum translateX value you want to allow
+        const translateXMovement = baseTranslateX + (maxTranslateX * percentageInView); // Calculate new translateX
+
+        carousel.style.transform = `translateX(${translateXMovement}px)`;
     }
-  });
-  
-  window.addEventListener('scroll', () => {
+});
+
+window.addEventListener('scroll', () => {
     const carousel = document.querySelector('.carousel-2');
     const carouselRect = carousel.getBoundingClientRect(); // Get carousel's position relative to viewport
     const windowHeight = window.innerHeight;
     const isInView = carouselRect.top < windowHeight && carouselRect.bottom > 0; // Check if carousel is in the viewport
-  
+
     if (isInView) {
-      // Calculate how far the carousel is from being at the top of the viewport
-      const distanceFromTopOfViewport = carouselRect.top;
-      const percentageInView = Math.max(0, 1 - (distanceFromTopOfViewport / windowHeight));
-  
-      // Use this percentage to scale the translateX movement
-      const baseTranslateX = 0; // Starting point for translateX
-      const maxTranslateX = -250; // Maximum translateX value you want to allow
-      const translateXMovement = baseTranslateX + (maxTranslateX * percentageInView); // Calculate new translateX
-  
-      carousel.style.transform = `translateX(${translateXMovement}px)`;
+        // Calculate how far the carousel is from being at the top of the viewport
+        const distanceFromTopOfViewport = carouselRect.top;
+        const percentageInView = Math.max(0, 1 - (distanceFromTopOfViewport / windowHeight));
+
+        // Use this percentage to scale the translateX movement
+        const baseTranslateX = 0; // Starting point for translateX
+        const maxTranslateX = -250; // Maximum translateX value you want to allow
+        const translateXMovement = baseTranslateX + (maxTranslateX * percentageInView); // Calculate new translateX
+
+        carousel.style.transform = `translateX(${translateXMovement}px)`;
     }
-  });
-  
+});

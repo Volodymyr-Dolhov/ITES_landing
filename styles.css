@@ -244,6 +244,10 @@ header {
   transition: 0.5s ease-in;
 }
 
+.contact-button-mobile-header {
+  display: none;
+}
+
 .contact-button {
   position: relative;
   width: 302px;
@@ -888,22 +892,10 @@ header {
   z-index: 2;
 }
 
-.submit-button::before {
-  --size: 0;
-  content: "";
-  position: absolute;
-  left: var(--x);
-  top: var(--y);
-  width: var(--size);
-  height: var(--size);
-  background: radial-gradient(circle closest-side, #1f1beb, transparent);
-  transform: translate(-50%, -50%);
-  transition: width 0.2s ease, height 0.2s ease;
-  z-index: 0;
-}
-
-.submit-button:hover::before {
-  --size: 200px;
+.submit-button:hover {
+  background-color: #1f1beb;
+  transition: 0.5s ease-in;
+  color: #fff;
 }
 
 #contact-form {
@@ -1097,7 +1089,7 @@ footer {
 
   .header-container nav {
     position: absolute;
-    bottom: -200px;
+    bottom: -232px;
     left: 0;
     width: 100%;
     border-radius: 24px;
@@ -1156,6 +1148,14 @@ footer {
 
   .contact-button {
     align-self: unset;
+  }
+
+  .contact-button-header {
+    display: none;
+  }
+  
+  .contact-button-mobile-header {
+    display: block;
   }
 
   .about-container-first {
