@@ -766,7 +766,7 @@ header {
 .carousel-item {
   border-radius: 16px;
   width: 640px;
-  /* height: 384px; */
+  height: 384px;
   flex-shrink: 0;
 }
 
