@@ -202,7 +202,6 @@ header {
 }
 
 .logo {
-  margin-right: 1rem;
   width: 232px;
   height: 34px;
   background-image: url("./media/logos/logo-long.svg");
@@ -659,7 +658,7 @@ header {
 
 .services-card p {
   color: #ffffff;
-  padding: 0 6rem 0 6rem;
+  padding: 0 6rem 2rem 6rem;
   font-size: 26px;
   font-weight: 300;
   line-height: 36px;
