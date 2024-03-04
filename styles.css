@@ -124,7 +124,7 @@ header {
 }
 
 .container {
-  width: 100%;
+  width: calc(100% - 4rem);
   max-width: 1600px;
   margin: 0 auto;
   padding: 0 2rem;
@@ -522,7 +522,7 @@ header {
   line-height: 40px;
   font-weight: 500;
   line-height: 40px;
-  padding: 2rem 16rem 0 3rem;
+  padding: 2rem 2rem 0 3rem;
 }
 
 .about-card-3 p {
@@ -838,6 +838,7 @@ header {
   max-width: 1600px;
   display: flex;
   margin-top: 80px;
+  padding: 0 2rem;
 }
 
 .contact-form-container {
@@ -932,12 +933,16 @@ header {
 footer {
   margin-top: 60px;
   width: 100%;
+  justify-content: center;
+  display: flex;
 }
 
 .footer-container {
   display: flex;
-  width: 100%;
+  max-width: 1600px;
   flex-direction: column;
+  width: 100%;
+  padding: 0 2rem;
 }
 
 .footer-main {
@@ -947,7 +952,6 @@ footer {
   height: 200px;
   /* padding: 0 200px; */
   margin: 60px 0;
-  gap: 8rem;
 }
 
 .footer-logo .logo {
@@ -1129,6 +1133,7 @@ footer {
   }
 
   .container {
+    width: 100%;
     margin: 0 auto;
     padding: unset;
   }
